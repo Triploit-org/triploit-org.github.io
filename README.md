@@ -2,14 +2,14 @@
 
 ![Logo](https://triploit.github.io/assets/images/logo-test-1400x1400-72.png)
  
-```nasm
-<span class="cp">%io.asm</span>
+<div class="language-nasm highlighter-rouge"><pre class="highlight"><code><span class="cp">%io.asm</span>
 
-main:
-  push "Hallo Welt!"
-  mov 12, hx
-  jmp write_string
-```
+<span class="n">main</span><span class="o">:</span>
+  <span class="k">push</span> <span class="s">"Hallo Welt!"</span>
+  <span class="k">mov</span> <span class="mi">12</span><span class="p">,</span> <span class="n">hx</span>
+  <span class="k">jmp</span> <span class="n">write_string</span>
+</code></pre>
+</div>
 <dl>
 <h2>Test</h2>
 </dl>
