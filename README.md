@@ -3,7 +3,7 @@
 ![Logo](https://triploit.github.io/assets/images/logo-test-1400x1400-72.png)
  
 ```nasm
-%io.asm
+<span class="cp">%io.asm</span>
 
 main:
   push "Hallo Welt!"
