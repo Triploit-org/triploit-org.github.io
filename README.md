@@ -10,7 +10,7 @@
 
 </div>
 <dl>
-<p><a href="https://triploit-org.github.io/basm">SEE BASM HERE BASM</a></p>
+<p><a href="https://triploit-org.github.io/basm">SEE BASM HERE</a></p>
 <center><h2>Be careful with HX!!!!</h2></center>
 </dl>
 <!-- Test -->
