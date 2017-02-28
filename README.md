@@ -1,5 +1,5 @@
 <center><h1>Test</h1></center>
-<img src="https://triploit.github.io/assets/images/logo-test-1400x1400-72.png" style="width:200px;height:200px;"></img>
+<center><img src="https://triploit.github.io/assets/images/logo-test-1400x1400-72.png" style="width:200px;height:200px;"></center>
  
 <div class="language-nasm highlighter-rouge"><pre class="highlight"><code><span class="cp">%io.asm</span>
 <span class="n">main</span><span class="o">:</span>
