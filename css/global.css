@@ -7,6 +7,11 @@ div.line
     height: 1px;
 }
 
+@keyframes example {
+    0% {color: rgb(10, 80, 190);}
+    100% {color: black;}
+}
+
 p
 {
     font-size: 19px;
@@ -44,9 +49,22 @@ a.button
     width: auto;
 }
 
+#nav a.menu
+{
+    text-decoration: none;
+    font-size: 19px;
+    color: black;
+    width: 12%;
+    padding: 30px;
+}
+
 #nav a:hover
 {
-    color: black;
+    padding: 30px;
+    color: rgb(10, 80, 190);
+
+    animation-name: example;
+    animation-duration: 10s;
 }
 
 code
