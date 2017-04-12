@@ -1,0 +1,95 @@
+div.line
+{
+    border: none;
+    border-top: 1px solid rgb(130, 130, 130);
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    height: 1px;
+}
+
+p
+{
+    font-size: 19px;
+}
+
+a.button
+{
+    font-size: 19px;
+}
+
+.container
+{
+    margin-top: 50px;
+}
+
+#nav
+{
+    margin: 20px 0 0 0;
+    margin-bottom: -10%;
+    width: auto;
+}
+
+#nav ul li
+{
+    display: inline;
+    margin: 0 20px 0 0;
+    margin-bottom: 130px;
+    width: auto;
+}
+
+#nav a
+{
+    text-decoration: none;
+    font-size: 19px;
+    width: auto;
+}
+
+#nav a:hover
+{
+    color: black;
+}
+
+code
+{
+    font-size: 19px;
+    border: none;
+}
+
+pre
+{
+    font-size: 19px;
+}
+
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.vcenter
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    vertical-align: center;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+img.bordered
+{
+   border: 1px solid rgb(130, 130, 130);
+   padding: 10px;
+}
