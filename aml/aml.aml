@@ -16,7 +16,7 @@ html
         link (rel: "stylesheet", href: "../css/global.css"){}
 
         style
-        {"
+        {
             div.logo
             {
                 width: 800px;
@@ -26,36 +26,41 @@ html
             {
                 margin-top: 7%;
             }
-        "}
+        }
     }
 
     body
     {
         div (class: "container")
-        {
+		{
             div (class: "row")
-            {
-                img (src: "../images/logo.png", class: "logo"){}
+			{
+                img (src: "../images/logo.png", style: "width: 800px;") {}
+            }
+
+            div
+			{
+                "EN" a (href: "../en/index.html") { img (src: "http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png", width: "30") {} }
             }
 
             div (class: "line") {}
         }
 
-
-        div(class: "container")
-        {
+        div (class: "container", style: "margin-top: -10px")
+		{
             div (class: "row")
-            {
-                div (id: "nav")
-                {
-                    a (class: "menu", href: "../index.html") {"Home"}
-                    a (class: "menu", href: "../basm.html") {"BASM"}
-                    a (class: "menu", href: "../nypp.html") {"Ny++5"}
-                    a (class: "menu", href: "../tricl.html") {"TRICL"}
-                    a (class: "menu", href: "../secpm.html") {"SecPM"}
-                    a (class: "menu", href: "../team.html") {"Team"}
-                    a (class: "menu", href: "../tbi3.html") {"TBI3"}
-                    a (class: "menu", href: "../tpl.html") {"TPL"}
+			{
+                div (class: "center")
+				{
+                    a (class: "menu", href: "../index.html") { "Home" }
+                    a (class: "menu", href: "../basm.html") { "BASM" }
+                    a (class: "menu", href: "../nypp.html") { "Ny++5" }
+                    a (class: "menu", href: "../tricl.html") { "TRICL" }
+                    a (class: "menu", href: "../secpm.html") { "SecPM" }
+                    a (class: "menu", href: "../team.html") { "Team" }
+                    a (class: "menu", href: "../tbi3.html") { "TBI3" }
+                    a (class: "menu", href: "../tpl.html") { "TPL" }
+                    a (class: "menu", href: "../aml/aml.html") { "AML" }
                 }
             }
         }

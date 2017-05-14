@@ -5,10 +5,14 @@ div.line
     color: #FFFFFF;
     background-color: #FFFFFF;
     height: 1px;
+	padding-bottom: 20px;
 }
 
 @keyframes example {
-    0% {color: rgb(10, 80, 190);}
+	0% {color: black;}
+	25% {color: rgb(10, 90, 190);}
+	50% {color: black;}
+    75% {color: rgb(10, 90, 190);}
     100% {color: black;}
 }
 
@@ -51,20 +55,15 @@ a.button
 
 #nav a.menu
 {
-    text-decoration: none;
-    font-size: 19px;
-    color: black;
-    width: 12%;
-    padding: 30px;
+	text-decoration: none;
+	font-size: 19px;
+	color: black;
+	padding: 10px;
 }
 
-#nav a:hover
+#nav a.menu:hover
 {
-    padding: 30px;
     color: rgb(10, 80, 190);
-
-    animation-name: example;
-    animation-duration: 10s;
 }
 
 code
@@ -76,6 +75,19 @@ code
 pre
 {
     font-size: 19px;
+}
+
+a.menu
+{
+	text-decoration: none;
+	font-size: 19px;
+	color: black;
+	padding: 10px;
+}
+
+a.menu:hover
+{
+    color: rgb(10, 80, 190);
 }
 
 .center
