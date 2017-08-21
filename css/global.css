@@ -1,5 +1,4 @@
-div.line
-{
+div.line {
     border: none;
     border-top: 1px solid rgb(130, 130, 130);
     color: #FFFFFF;
@@ -7,35 +6,9 @@ div.line
     height: 1px;
 }
 
-div.main_container
-{
-	padding-left: 20%;
-	padding-right: 20%;
-	padding-top: -15%;
-	padding-bottom: 5%;
-}
-
-html, body
-{
-	background-image: url("../images/bg.jpg");
-	margin: 0;
-}
-
-div.container
-{
-	width: 100%;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 20px;
-	padding-top: 40px;
-	background-color: white;
-}
-
-#nav a.menu
-{
-	text-decoration: none;
-	font-size: 19px;
-	color: black;
+@font-face {
+	font-family: "LINTSEC";
+	src: url("/files/fonts/lintsec.ttf");
 }
 
 @keyframes example {
@@ -46,117 +19,25 @@ div.container
     100% {color: black;}
 }
 
-p
-{
+p {
     font-size: 19px;
 }
 
-a.button
-{
+a.button {
     font-size: 19px;
 }
 
-.container
-{
+.container {
     margin-top: 50px;
 }
 
-#nav
-{
-    margin: 20px 0 0 0;
-    margin-bottom: -10%;
-    width: auto;
-}
-
-#nav ul li
-{
-    display: inline;
-    margin: 0 20px 0 0;
-    margin-bottom: 130px;
-    width: auto;
-}
-
-#nav a
-{
-    text-decoration: none;
-    font-size: 19px;
-    width: auto;
-}
-
-#nav a.menu:hover
-{
-    color: rgb(10, 80, 190);
-}
-
-code
-{
-    font-size: 19px;
-    border: none;
-}
-
-pre
-{
-    font-size: 19px;
-}
-
-a.menu
-{
-	text-decoration: none;
-	font-size: 19px;
-	color: black;
-	padding: 10px;
-}
-
-a.menu:hover
-{
-    color: rgb(10, 80, 190);
-}
-
-.center
-{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-}
-
-.vcenter
-{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    vertical-align: center;
-}
-
-img
-{
+img {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
 }
 
-img.bordered
-{
+img.bordered {
    border: 1px solid rgb(130, 130, 130);
    padding: 10px;
-}
-
-@media only screen and (max-width: 768px)
-{
-	h1 { font-size: 25px; }
-	h2 { font-size: 23px; }
-	h3 { font-size: 20px; }
-	h4 { font-size: 17px; }
-	h5 { font-size: 14px; }
-	h6 { font-size: 11px; }
-
-	#nav, pre, code, p, a.button, a.menu
-	{
-		font-size: 12px;
-	}
 }
