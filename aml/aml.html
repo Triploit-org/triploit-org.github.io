@@ -32,76 +32,76 @@ Triploit ORG
 		</style>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<img src="../images/logo.png" style="width: 800px;">
-				</img>
-			</div>
-			<div>
-EN
-				<a href="../en/index.html">
-					<img src="http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png" width="30">
+		<div class="main_container">
+			<div class="container">
+				<div class="row">
+					<img src="../images/logo.png" style="width: 800px;">
 					</img>
-				</a>
-			</div>
-			<div class="line">
-			</div>
-		</div>
-		<div class="container" style="margin-top: -10px">
-			<div class="row">
-				<div class="center">
-					<a class="menu" href="../index.html">
-Home
-					</a>
-					<a class="menu" href="../basm.html">
-BASM
-					</a>
-					<a class="menu" href="../nypp.html">
-Ny++5
-					</a>
-					<a class="menu" href="../tricl.html">
-TRICL
-					</a>
-					<a class="menu" href="../secpm.html">
-SecPM
-					</a>
-					<a class="menu" href="../team.html">
-Team
-					</a>
-					<a class="menu" href="../tbi3.html">
-TBI3
-					</a>
-					<a class="menu" href="../tpl.html">
-TPL
-					</a>
-					<a class="menu" href="../aml/aml.html">
-AML
+				</div>
+				<div>
+EN
+					<a href="../en/index.html">
+						<img src="http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png" width="30">
+						</img>
 					</a>
 				</div>
+				<div class="line">
+				</div>
+				<br>
+				</br>
+				<div class="row">
+					<div class="center">
+						<a class="menu" href="../index.html">
+Home
+						</a>
+						<a class="menu" href="../basm.html">
+BASM
+						</a>
+						<a class="menu" href="../nypp.html">
+Ny++5
+						</a>
+						<a class="menu" href="../tricl.html">
+TRICL
+						</a>
+						<a class="menu" href="../secpm.html">
+SecPM
+						</a>
+						<a class="menu" href="../team.html">
+Team
+						</a>
+						<a class="menu" href="../tbi3.html">
+TBI3
+						</a>
+						<a class="menu" href="../tpl.html">
+TPL
+						</a>
+						<a class="menu" href="../aml/aml.html">
+AML
+						</a>
+						<a class="menu" href="https://github.com/Triploit-org">
+GitHub
+						</a>
+						<a class="menu" href="../about.html">
+Impressum
+						</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="column">
+			<div class="container">
+				<div class="row">
 					<h4>
 AML
 					</h4>
 					<p>
-
-                        Diese Seite wurde komplett mit AML generiert!
-                    
-					</p>
-					<p>
-
-                        Source-Code der Seite:
-                    
+Diese Seite wurde komplett mit AML generiert!<br>Source-Code der Seite:
 					</p>
 					<pre>
 						<code class="language-c">
-html
+html ()
 {
-    head
+    head ()
     {
+        title { "Triploit ORG" }
         meta(charset: "utf-8"){}
         meta(name: "viewport", content: "width=device-width, initial-scale=1"){}
 
@@ -110,12 +110,12 @@ html
         link (rel: "stylesheet", href: "../css/skeleton.css"){}
         link (rel: "icon", type: "image/png", href: "../images/favicon.png"){}
 
-        script (src: "js/prism.js"){}
+        script (src: "../js/prism.js"){}
         link (rel: "stylesheet", href: "../css/prism.css"){}
         link (rel: "stylesheet", href: "../css/global.css"){}
 
         style
-        {"
+        {
             div.logo
             {
                 width: 800px;
@@ -125,72 +125,87 @@ html
             {
                 margin-top: 7%;
             }
-        "}
-    }
-
-    body
-    {
-        div (class: "container")
-        {
-            div (class: "row")
-            {
-                img (src: "../images/logo.png", class: "logo"){}
-            }
-
-            div (class: "line") {}
-        }
-
-
-        div(class: "container")
-        {
-            div (class: "row")
-            {
-                div (id: "nav")
-                {
-                    a (class: "menu", href: "../index.html") {"Home"}
-                    a (class: "menu", href: "../basm.html") {"BASM"}
-                    a (class: "menu", href: "../nypp.html") {"Ny++5"}
-                    a (class: "menu", href: "../tricl.html") {"TRICL"}
-                    a (class: "menu", href: "../secpm.html") {"SecPM"}
-                    a (class: "menu", href: "../team.html") {"Team"}
-                    a (class: "menu", href: "../tbi3.html") {"TBI3"}
-                    a (class: "menu", href: "../tpl.html") {"TPL"}
-                }
-            }
-        }
-
-        div (class: "container")
-        {
-            div (class: "row")
-            {
-                div (class: "column")
-                {
-                    h4 { "AML" }
-
-                    p
-                    {"
-                        Diese Seite wurde komplett mit AML generiert!
-                    "}
-
-                    p
-                    {"
-                        Source-Code der Seite:
-                    "}
-
-
-                    pre {
-                        code(class: "language-nasm")
-                        {"
-
-                        "}
-                    }
-                }
-            }
         }
     }
-}                      
+
+	body ()
+	{
+	    div (class: "main_container")
+		{
+			div (class: "container")
+			{
+	            div (class: "row")
+				{
+	                img (src: "images/logo.png", style: "width: 800px;") {}
+	            }
+
+	            div ()
+				{
+	                EN a (href: "en/index.html") { img (src: "http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png", width: "30") {}}
+	            }
+
+				div (class: "line"){}
+				br () {}
+
+	            div (class: "row")
+				{
+	                div (class: "center")
+					{
+	                    a (class: "menu", href: "index.html") { "Home" }
+	                    a (class: "menu", href: "basm.html") { "BASM" }
+	                    a (class: "menu", href: "nypp.html") { "Ny++5" }
+	                    a (class: "menu", href: "tricl.html") { "TRICL" }
+	                    a (class: "menu", href: "secpm.html") { "SecPM" }
+	                    a (class: "menu", href: "team.html") { "Team" }
+	                    a (class: "menu", href: "tbi3.html") { "TBI3" }
+	                    a (class: "menu", href: "tpl.html") { "TPL" }
+	                    a (class: "menu", href: "aml/aml.html") { "AML" }
+	                    a (class: "menu", href: "https://github.com/Triploit-org") { "GitHub" }
+			    		a (class: "menu", href: "about.html") { "Impressum" }
+	            	}
+				}
+			}
+
+	        div (class: "container")
+	        {
+	            div (class: "row")
+	            {
+	                div (class: "column")
+	                {
+	                    h4 { "AML" }
+
+	                    p
+	                    {
+	                        "Diese Seite wurde komplett mit AML generiert!"
+	                    }
+
+	                    p
+	                    {
+	                        "Source-Code der Seite:"
+	                    }
+
+	                    pre
+	                    {
+	                        code(class: "language-c")
+	                        {"
+
+							"}
+	                    }
+	                }
+	            }
+	        }
+	    }
+	}
+
+}
+						
 						</code>
 					</pre>
+				</div>
+				<div class="center">
+					<a class="button" href="https://github.com/Triploit-org/aml">
+AML
+					</a>
 				</div>
 			</div>
 		</div>

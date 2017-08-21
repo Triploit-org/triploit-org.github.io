@@ -1,6 +1,6 @@
-html
+html ()
 {
-    head
+    head ()
     {
         title { "Triploit ORG" }
         meta(charset: "utf-8"){}
@@ -29,68 +29,64 @@ html
         }
     }
 
-    body
-    {
-        div (class: "container")
+	body ()
+	{
+	    div (class: "main_container")
 		{
-            div (class: "row")
+			div (class: "container")
 			{
-                img (src: "../images/logo.png", style: "width: 800px;") {}
-            }
-
-            div
-			{
-                "EN" a (href: "../en/index.html") { img (src: "http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png", width: "30") {} }
-            }
-
-            div (class: "line") {}
-        }
-
-        div (class: "container", style: "margin-top: -10px")
-		{
-            div (class: "row")
-			{
-                div (class: "center")
+	            div (class: "row")
 				{
-                    a (class: "menu", href: "../index.html") { "Home" }
-                    a (class: "menu", href: "../basm.html") { "BASM" }
-                    a (class: "menu", href: "../nypp.html") { "Ny++5" }
-                    a (class: "menu", href: "../tricl.html") { "TRICL" }
-                    a (class: "menu", href: "../secpm.html") { "SecPM" }
-                    a (class: "menu", href: "../team.html") { "Team" }
-                    a (class: "menu", href: "../tbi3.html") { "TBI3" }
-                    a (class: "menu", href: "../tpl.html") { "TPL" }
-                    a (class: "menu", href: "../aml/aml.html") { "AML" }
-                }
-            }
-        }
+	                img (src: "../images/logo.png", style: "width: 800px;") {}
+	            }
 
-        div (class: "container")
-        {
-            div (class: "row")
-            {
-                div (class: "column")
-                {
+	            div ()
+				{
+	                "EN" a (href: "../en/index.html") { img (src: "http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png", width: "30") {}}
+	            }
+
+				div (class: "line"){}
+				br () {}
+
+	            div (class: "row")
+				{
+	                div (class: "center")
+					{
+	                    a (class: "menu", href: "../index.html") { "Home" }
+	                    a (class: "menu", href: "../basm.html") { "BASM" }
+	                    a (class: "menu", href: "../nypp.html") { "Ny++5" }
+	                    a (class: "menu", href: "../tricl.html") { "TRICL" }
+	                    a (class: "menu", href: "../secpm.html") { "SecPM" }
+	                    a (class: "menu", href: "../team.html") { "Team" }
+	                    a (class: "menu", href: "../tbi3.html") { "TBI3" }
+	                    a (class: "menu", href: "../tpl.html") { "TPL" }
+	                    a (class: "menu", href: "../aml/aml.html") { "AML" }
+	                    a (class: "menu", href: "https://github.com/Triploit-org") { "GitHub" }
+			    		a (class: "menu", href: "../about.html") { "Impressum" }
+	            	}
+				}
+			}
+
+	        div (class: "container")
+	        {
+	            div (class: "row")
+	            {
                     h4 { "AML" }
 
                     p
-                    {"
-                        Diese Seite wurde komplett mit AML generiert!
-                    "}
-
-                    p
-                    {"
-                        Source-Code der Seite:
-                    "}
-
+                    {
+                        "Diese Seite wurde komplett mit AML generiert!\n"
+                        "Source-Code der Seite:"
+                    }
 
                     pre
                     {
                         code(class: "language-c")
-                        {"html
+                        {"html ()
 {
-    head
+    head ()
     {
+        title { \"Triploit ORG\" }
         meta(charset: \"utf-8\"){}
         meta(name: \"viewport\", content: \"width=device-width, initial-scale=1\"){}
 
@@ -99,12 +95,12 @@ html
         link (rel: \"stylesheet\", href: \"../css/skeleton.css\"){}
         link (rel: \"icon\", type: \"image/png\", href: \"../images/favicon.png\"){}
 
-        script (src: \"js/prism.js\"){}
+        script (src: \"../js/prism.js\"){}
         link (rel: \"stylesheet\", href: \"../css/prism.css\"){}
         link (rel: \"stylesheet\", href: \"../css/global.css\"){}
 
         style
-        {\"
+        {
             div.logo
             {
                 width: 800px;
@@ -114,73 +110,87 @@ html
             {
                 margin-top: 7%;
             }
-        \"}
+        }
     }
 
-    body
-    {
-        div (class: \"container\")
-        {
-            div (class: \"row\")
-            {
-                img (src: \"../images/logo.png\", class: \"logo\"){}
-            }
+	body ()
+	{
+	    div (class: \"main_container\")
+		{
+			div (class: \"container\")
+			{
+	            div (class: \"row\")
+				{
+	                img (src: \"images/logo.png\", style: \"width: 800px;\") {}
+	            }
 
-            div (class: \"line\") {}
-        }
+	            div ()
+				{
+	                EN a (href: \"en/index.html\") { img (src: \"http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png\", width: \"30\") {}}
+	            }
 
+				div (class: \"line\"){}
+				br () {}
 
-        div(class: \"container\")
-        {
-            div (class: \"row\")
-            {
-                div (id: \"nav\")
-                {
-                    a (class: \"menu\", href: \"../index.html\") {\"Home\"}
-                    a (class: \"menu\", href: \"../basm.html\") {\"BASM\"}
-                    a (class: \"menu\", href: \"../nypp.html\") {\"Ny++5\"}
-                    a (class: \"menu\", href: \"../tricl.html\") {\"TRICL\"}
-                    a (class: \"menu\", href: \"../secpm.html\") {\"SecPM\"}
-                    a (class: \"menu\", href: \"../team.html\") {\"Team\"}
-                    a (class: \"menu\", href: \"../tbi3.html\") {\"TBI3\"}
-                    a (class: \"menu\", href: \"../tpl.html\") {\"TPL\"}
-                }
-            }
-        }
+	            div (class: \"row\")
+				{
+	                div (class: \"center\")
+					{
+	                    a (class: \"menu\", href: \"index.html\") { \"Home\" }
+	                    a (class: \"menu\", href: \"basm.html\") { \"BASM\" }
+	                    a (class: \"menu\", href: \"nypp.html\") { \"Ny++5\" }
+	                    a (class: \"menu\", href: \"tricl.html\") { \"TRICL\" }
+	                    a (class: \"menu\", href: \"secpm.html\") { \"SecPM\" }
+	                    a (class: \"menu\", href: \"team.html\") { \"Team\" }
+	                    a (class: \"menu\", href: \"tbi3.html\") { \"TBI3\" }
+	                    a (class: \"menu\", href: \"tpl.html\") { \"TPL\" }
+	                    a (class: \"menu\", href: \"aml/aml.html\") { \"AML\" }
+	                    a (class: \"menu\", href: \"https://github.com/Triploit-org\") { \"GitHub\" }
+			    		a (class: \"menu\", href: \"about.html\") { \"Impressum\" }
+	            	}
+				}
+			}
 
-        div (class: \"container\")
-        {
-            div (class: \"row\")
-            {
-                div (class: \"column\")
-                {
-                    h4 { \"AML\" }
+	        div (class: \"container\")
+	        {
+	            div (class: \"row\")
+	            {
+	                div (class: \"column\")
+	                {
+	                    h4 { \"AML\" }
 
-                    p
-                    {\"
-                        Diese Seite wurde komplett mit AML generiert!
-                    \"}
+	                    p
+	                    {
+	                        \"Diese Seite wurde komplett mit AML generiert!\"
+	                    }
 
-                    p
-                    {\"
-                        Source-Code der Seite:
-                    \"}
+	                    p
+	                    {
+	                        \"Source-Code der Seite:\"
+	                    }
 
+	                    pre
+	                    {
+	                        code(class: \"language-c\")
+	                        {\"
 
-                    pre {
-                        code(class: \"language-nasm\")
-                        {\"
+							\"}
+	                    }
+	                }
+	            }
+	        }
+	    }
+	}
 
-                        \"}
+}
+						"}
                     }
-                }
-            }
-        }
-    }
-}                      "}
-                    }
-                }
-            }
-        }
-    }
+	            }
+
+				div (class: "center") { a (class: "button" href: "https://github.com/Triploit-org/aml") { "AML" } }
+		    }
+
+		}
+	}
+
 }

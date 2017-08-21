@@ -17,51 +17,57 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="row">
-                <img src="images/logo.png" style="width: 800px;"></img>
-            </div>
+        <div class="main_container">
+			<div class="container">
+	            <div class="row">
+	                <img src="images/logo.png" style="width: 800px;"></img>
+	            </div>
 
-            <div>
-                EN <a href="en/index.html"><img src="http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png" width="30"></img></a>
-            </div>
+	            <div>
+	                EN <a href="en/index.html"><img src="http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png" width="30"></img></a>
+	            </div>
 
-            <div class="line"></div>
-        </div>
+				<div class="line"></div>
+				<br>
+	            <div class="row">
+	                <div class="center">
+	                    <a class="menu" href="index.html">Home</a>
+	                    <a class="menu" href="basm.html">BASM</a>
+	                    <a class="menu" href="nypp.html">Ny++5</a>
+	                    <a class="menu" href="tricl.html">TRICL</a>
+	                    <a class="menu" href="secpm.html">SecPM</a>
+	                    <a class="menu" href="team.html">Team</a>
+	                    <a class="menu" href="tbi3.html">TBI3</a>
+	                    <a class="menu" href="tpl.html">TPL</a>
+	                    <a class="menu" href="aml/aml.html">AML</a>
+	                    <a class="menu" href="https://github.com/Triploit-org">GitHub</a>
+			    		<a class="menu" href="about.html">Impressum</a>
+	                </div>
+	            </div>
+	        </div>
 
-        <div class="container" style="margin-top: -10px">
-            <div class="row">
-                <div class="center">
-                    <a class="menu" href="index.html">Home</a>
-                    <a class="menu" href="basm.html">BASM</a>
-                    <a class="menu" href="nypp.html">Ny++5</a>
-                    <a class="menu" href="tricl.html">TRICL</a>
-                    <a class="menu" href="secpm.html">SecPM</a>
-                    <a class="menu" href="team.html">Team</a>
-                    <a class="menu" href="tbi3.html">TBI3</a>
-                    <a class="menu" href="tpl.html">TPL</a>
-                    <a class="menu" href="aml/aml.html">AML</a>
-                </div>
-            </div>
-        </div>
+	        <div class="container">
+	            <div class="row">
+	                <h4>SecundoPM</h4>
+	                <p style="margin-top: 2%">
+	                    SecundoPM/SecPM ist der Nachfolger zu TRICL und ein ausgesprochen
+	                    guter und einfach zu benutzender Paketmanager.
+	                    <br>
+	                    Um ihn zu nutzen muss er einfach nur heruntergeladen und mit GCC/G++
+	                    kompiliert werden. Danach reicht ein einfaches (Linux) <code>./secpm install secundo-pm</code>.
+	                    Auf Windows muss der Paketmanager manuell installiert werden, dass bedeutet die
+	                    secpm.exe muss/kann in den System32 Ordner verschoben werden.
+	                </p>
+				</div>
+			</div>
 
-        <div class="container">
-            <div class="row" style="margin-top: 15%">
-                <h4>SecundoPM</h4>
-                <p style="margin-top: 2%">
-                    SecundoPM/SecPM ist der Nachfolger zu TRICL und ein ausgesprochen
-                    guter und einfach zu benutzender Paketmanager.
-                    <br>
-                    Um ihn zu nutzen muss er einfach nur heruntergeladen und mit GCC/G++
-                    kompiliert werden. Danach reicht ein einfaches (Linux) <code>./secpm install secundo-pm</code>.
-                    Auf Windows muss der Paketmanager manuell installiert werden, dass bedeutet die
-                    secpm.exe muss in den System32 Ordner verschoben werden.
-                    <br>
-                    <br>
-                    Ein Beispiel zu einem Installer-Script:
-                </p>
+			<div class="container">
+				<div class="row">
+					<p>
 
-<!----------------------------------- CODE ------------------------------------->
+	                    Ein Beispiel zu einem Installer-Script:
+					</p>
+	<!----------------------------------- CODE ------------------------------------->
 <pre>
 <code class="language-go">func install
 {
@@ -80,70 +86,95 @@ func update
 }</code>
 </pre>
 <!----------------------------------- CODE ------------------------------------->
+				</div>
+			</div>
 
-                <p>
-                    <br>
-                    <br>
-                    Wird dies in die Installer-Datei (in der GitHub Repo in pkg/ins.sc) geschrieben
-                    und das Paket mit <code>secpm user [GitHub Username] install [Repo Name]</code>,
-                    so wird beim installieren nun "Hallo Welt" ausgegeben. Pakete können natürlich so
-                    erstellt werden. Es werden einfach die nötigen Shell-Befehle in die Datei eingetragen.
-                    <br><br>
-                    Für Linux:<br><br>
-                    <table width="100%">
-                        <tr height="5px" style="font-size: 19px">
-                            <td>Funktionsname</td>
-                            <td>SecPM Argument</td>
-                            <td>Wirkung</td>
-                        </tr>
-                        <tr>
-                            <td>remove</td>
-                            <td>remove</td>
-                            <td>Entfernt ein Paket mit den Befehlen aus der nötigen Funktion.</td>
-                        </tr>
-                        <tr>
-                            <td>install</td>
-                            <td>install</td>
-                            <td>Installiert ein Paket mit den Befehlen aus der nötigen Funktion.</td>
-                        </tr>
-                        <tr>
-                            <td>update</td>
-                            <td>update</td>
-                            <td>Updated das Paket mit den jeweiligen Befehlen der jeweiligen Funktion.</td>
-                        </tr>
-                    </table>
-                    <br>
-                    Für Windows:
-                    <br><br>
-                    <table width="100%">
-                        <tr height="5px" style="font-size: 19px">
-                            <td>Funktionsname</td>
-                            <td>SecPM Argument</td>
-                            <td>Wirkung</td>
-                        </tr>
-                        <tr>
-                            <td>remove_win</td>
-                            <td>remove</td>
-                            <td>Dasselbe wie remove, bloß diese Funktion wird nur unter Windows ausgeführt.</td>
-                        </tr>
-                        <tr>
-                            <td>install_win</td>
-                            <td>install</td>
-                            <td>Dasselbe wie install, bloß diese Funktion wird nur unter Windows ausgeführt.</td>
-                        </tr>
-                        <tr>
-                            <td>update_win</td>
-                            <td>update</td>
-                            <td>Dasselbe wie update, bloß diese Funktion wird nur unter Windows ausgeführt.</td>
-                        </tr>
-                    </table>
-                    <br>
 
-                    <div class="center">
-                        <a class="button" href="https://github.com/Triploit-org/secundo-pm">SecPM</a>
-                    </div>
-                </p>
-            </div>
+			<div class="container">
+				<div class="row">
+	                <p>
+	                    <br>
+	                    <br>
+	                    Wird dies in die Installer-Datei (in der GitHub Repo in pkg/ins.sc) geschrieben
+	                    und das Paket mit <code>secpm user [GitHub Username] install [Repo Name]</code>,
+	                    so wird beim installieren nun "Hallo Welt" ausgegeben. Pakete können natürlich so
+	                    erstellt werden. Es werden einfach die nötigen Shell-Befehle in die Datei eingetragen.
+	                    <br><br>
+
+					</div>
+				</div>
+
+
+		        <div class="container">
+		            <div class="row">
+	                    Für Linux:<br><br>
+	                    <table width="100%">
+	                        <tr height="5px" style="font-size: 19px">
+	                            <td>Funktionsname</td>
+	                            <td>SecPM Argument</td>
+	                            <td>Wirkung</td>
+	                        </tr>
+	                        <tr>
+	                            <td>remove</td>
+	                            <td>remove</td>
+	                            <td>Entfernt ein Paket mit den Befehlen aus der nötigen Funktion.</td>
+	                        </tr>
+	                        <tr>
+	                            <td>install</td>
+	                            <td>install</td>
+	                            <td>Installiert ein Paket mit den Befehlen aus der nötigen Funktion.</td>
+	                        </tr>
+	                        <tr>
+	                            <td>update</td>
+	                            <td>update</td>
+	                            <td>Updated das Paket mit den jeweiligen Befehlen der jeweiligen Funktion.</td>
+	                        </tr>
+	                    </table>
+	                    <br>
+					</div>
+				</div>
+
+
+		        <div class="container">
+		            <div class="row">
+	                    Für Windows:
+	                    <br><br>
+	                    <table width="100%">
+	                        <tr height="5px" style="font-size: 19px">
+	                            <td>Funktionsname</td>
+	                            <td>SecPM Argument</td>
+	                            <td>Wirkung</td>
+	                        </tr>
+	                        <tr>
+	                            <td>remove_win</td>
+	                            <td>remove</td>
+	                            <td>Dasselbe wie remove, bloß diese Funktion wird nur unter Windows ausgeführt.</td>
+	                        </tr>
+	                        <tr>
+	                            <td>install_win</td>
+	                            <td>install</td>
+	                            <td>Dasselbe wie install, bloß diese Funktion wird nur unter Windows ausgeführt.</td>
+	                        </tr>
+	                        <tr>
+	                            <td>update_win</td>
+	                            <td>update</td>
+	                            <td>Dasselbe wie update, bloß diese Funktion wird nur unter Windows ausgeführt.</td>
+	                        </tr>
+	                    </table>
+	                    <br>
+					</div>
+				</div>
+
+
+		        <div class="container">
+		            <div class="row">
+
+	                    <div class="center">
+	                        <a class="button" href="https://github.com/Triploit-org/secundo-pm">SecPM</a>
+	                    </div>
+	                </p>
+	            </div>
+	        </div>
         </div>
     </body>
 </html>

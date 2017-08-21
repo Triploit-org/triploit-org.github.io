@@ -5,7 +5,36 @@ div.line
     color: #FFFFFF;
     background-color: #FFFFFF;
     height: 1px;
+}
+
+div.main_container
+{
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: -15%;
+	padding-bottom: 5%;
+}
+
+html, body
+{
+	background-image: url("../images/bg.jpg");
+}
+
+div.container
+{
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
 	padding-bottom: 20px;
+	padding-top: 40px;
+	background-color: white;
+}
+
+#nav a.menu
+{
+	text-decoration: none;
+	font-size: 19px;
+	color: black;
 }
 
 @keyframes example {
@@ -51,14 +80,6 @@ a.button
     text-decoration: none;
     font-size: 19px;
     width: auto;
-}
-
-#nav a.menu
-{
-	text-decoration: none;
-	font-size: 19px;
-	color: black;
-	padding: 10px;
 }
 
 #nav a.menu:hover
