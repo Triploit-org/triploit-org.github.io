@@ -7,8 +7,8 @@ div.line {
 }
 
 @font-face {
-	font-family: "LINTSEC";
-	src: url("/files/fonts/lintsec.ttf");
+	font-family: "Aaargh";
+	src: url("css/Aaargh.ttf");
 }
 
 @keyframes example {

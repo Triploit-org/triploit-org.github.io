@@ -87,9 +87,6 @@ AML
 						<a class="menu" href="https://github.com/Triploit-org">
 GitHub
 						</a>
-						<a class="menu" href="../about.html">
-Impressum
-						</a>
 					</div>
 				</div>
 			</div>
@@ -119,6 +116,9 @@ html ()
         script (src: "../js/prism.js"){}
         link (rel: "stylesheet", href: "../css/prism.css"){}
         link (rel: "stylesheet", href: "../css/global.css"){}
+        link (rel: "stylesheet", href: "../css/container.css"){}
+        link (rel: "stylesheet", href: "../css/nav.css"){}
+        link (rel: "stylesheet", href: "../css/mobile.css"){}
 
         style
         {
@@ -142,12 +142,12 @@ html ()
 			{
 	            div (class: "row")
 				{
-	                img (src: "images/logo.png", style: "width: 800px;") {}
+	                img (src: "../images/logo.png", style: "width: 800px;") {}
 	            }
 
 	            div ()
 				{
-	                EN a (href: "en/index.html") { img (src: "http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png", width: "30") {}}
+	                "EN" a (href: "../en/index.html") { img (src: "http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png", width: "30") {}}
 	            }
 
 				div (class: "line"){}
@@ -157,17 +157,16 @@ html ()
 				{
 	                div (class: "center")
 					{
-	                    a (class: "menu", href: "index.html") { "Home" }
-	                    a (class: "menu", href: "basm.html") { "BASM" }
-	                    a (class: "menu", href: "nypp.html") { "Ny++5" }
-	                    a (class: "menu", href: "tricl.html") { "TRICL" }
-	                    a (class: "menu", href: "secpm.html") { "SecPM" }
-	                    a (class: "menu", href: "team.html") { "Team" }
-	                    a (class: "menu", href: "tbi3.html") { "TBI3" }
-	                    a (class: "menu", href: "tpl.html") { "TPL" }
-	                    a (class: "menu", href: "aml/aml.html") { "AML" }
+	                    a (class: "menu", href: "../index.html") { "Home" }
+	                    a (class: "menu", href: "../basm.html") { "BASM" }
+	                    a (class: "menu", href: "../nypp.html") { "Ny++5" }
+	                    a (class: "menu", href: "../tricl.html") { "TRICL" }
+	                    a (class: "menu", href: "../secpm.html") { "SecPM" }
+	                    a (class: "menu", href: "../team.html") { "Team" }
+	                    a (class: "menu", href: "../tbi3.html") { "TBI3" }
+	                    a (class: "menu", href: "../tpl.html") { "TPL" }
+	                    a (class: "menu", href: "../aml/aml.html") { "AML" }
 	                    a (class: "menu", href: "https://github.com/Triploit-org") { "GitHub" }
-			    		a (class: "menu", href: "about.html") { "Impressum" }
 	            	}
 				}
 			}
@@ -176,35 +175,34 @@ html ()
 	        {
 	            div (class: "row")
 	            {
-	                div (class: "column")
-	                {
-	                    h4 { "AML" }
+                    h4 { "AML" }
 
-	                    p
-	                    {
-	                        "Diese Seite wurde komplett mit AML generiert!"
-	                    }
+                    p
+                    {
+                        "Diese Seite wurde komplett mit AML generiert!<br>"
+                        "Source-Code der Seite:"
+                    }
 
-	                    p
-	                    {
-	                        "Source-Code der Seite:"
-	                    }
-
-	                    pre
-	                    {
-	                        code(class: "language-c")
-	                        {"
-
-							"}
-	                    }
-	                }
+                    pre
+                    {
+                        code(class: "language-c")
+                        {""}
+                    }
 	            }
-	        }
-	    }
+
+				div (class: "center") { a (class: "button" href: "https://github.com/Triploit-org/aml") { "AML" } }
+		    }
+
+			footer ()
+			{
+				a (class: "footer", href: "about.html") { "Impressum" }
+				a (class: "footer", href: "about.html#about") { "Datenschutzerklärung" }
+			}
+		}
 	}
 
 }
-						
+
 						</code>
 					</pre>
 				</div>
@@ -214,6 +212,14 @@ AML
 					</a>
 				</div>
 			</div>
+			<footer>
+				<a class="footer" href="about.html">
+Impressum
+				</a>
+				<a class="footer" href="about.html#about">
+Datenschutzerklärung
+				</a>
+			</footer>
 		</div>
 	</body>
 </html>

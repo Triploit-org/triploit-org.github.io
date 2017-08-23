@@ -21,7 +21,7 @@ div.container {
 }
 
 code {
-    font-size: 19px;
+    font-size: 14px;
     border: none;
 }
 
@@ -46,4 +46,22 @@ pre {
     align-self: center;
     align-content: center;
     vertical-align: center;
+}
+
+footer {
+	margin-top: 40px;
+	padding: 5px;
+
+	color: darkgray;
+	background-color: white;
+	text-align: center;
+}
+
+a.footer {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	font-size: 15px;
+	color: black;
+	margin-bottom: 5px;
 }
