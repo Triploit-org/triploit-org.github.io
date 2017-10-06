@@ -179,8 +179,8 @@ html ()
 
 			footer ()
 			{
-				a (class: \"footer\", href: \"about.html\") { \"Impressum\" }
-				a (class: \"footer\", href: \"about.html#about\") { \"Datenschutzerklärung\" }
+				a (class: \"footer\", href: \"../about.html\") { \"Impressum\" }
+				a (class: \"footer\", href: \"../about.html#about\") { \"Datenschutzerklärung\" }
 			}
 		}
 	}
@@ -195,8 +195,8 @@ html ()
 
 			footer ()
 			{
-				a (class: "footer", href: "about.html") { "Impressum" }
-				a (class: "footer", href: "about.html#about") { "Datenschutzerklärung" }
+				a (class: "footer", href: "../about.html") { "Impressum" }
+				a (class: "footer", href: "../about.html#about") { "Datenschutzerklärung" }
 			}
 		}
 	}
