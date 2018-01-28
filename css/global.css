@@ -1,14 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Space+Mono');
+
 div.line {
     border: none;
     border-top: 1px solid rgb(130, 130, 130);
     color: #FFFFFF;
     background-color: #FFFFFF;
     height: 1px;
-}
-
-@font-face {
-	font-family: "Aaargh";
-	src: url("css/Aaargh.ttf");
 }
 
 @keyframes example {
@@ -21,14 +18,17 @@ div.line {
 
 p {
     font-size: 19px;
+	font-family: "Lato";
 }
 
 a.button {
     font-size: 19px;
+	font-family: "Lato";
 }
 
 .container {
     margin-top: 50px;
+	font-family: "Lato";
 }
 
 img {
