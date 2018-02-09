@@ -1,0 +1,164 @@
+#p_the_first {
+	height: 1200px;
+}
+
+#aml {
+	height: 2400px;
+	background-color: white;
+	padding-top: 50px;
+}
+
+#tsmi {
+	height: 3000px;
+}
+
+#secpm {
+	height: 2000px;
+}
+
+#github {
+	height: 1200px;
+}
+
+#imprint2 {
+	height: 200px;
+}
+
+#imprint {
+	padding-top: -50px;
+	height: 100px;
+}
+
+div.project1 {
+	padding: 50px;
+	margin: 50px;
+
+	font-size: 30px;
+	line-height: 35px;
+	color: white;
+}
+
+div.project-title1 {
+	font-size:50px;
+	color:white;
+}
+
+div.project-title2 {
+	text-align: center;
+	font-size: 50px;
+	color: black;
+	width: 100%;
+}
+
+div.project2 {
+	padding: 50px;
+	margin: 50px;
+
+	font-size: 30px;
+	line-height: 35px;
+	color: black;
+}
+
+div.code2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-left: 50px;
+
+	margin-left: 100px;
+	margin-right: 100px;
+
+	background-color: #0a253e;
+	color: white;
+
+	font-family: "Space Mono";
+	font-size: 16px;
+	word-wrap: break-word;
+}
+
+div.code1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-left: 50px;
+
+	margin-left: 100px;
+	margin-right: 100px;
+
+	background-color: white;
+	color: black;
+
+	font-family: "Space Mono";
+	font-size: 16px;
+	word-wrap: break-word;
+}
+
+iframe.html {
+	border-style: solid;
+	border-width: 3px;
+}
+
+pre {
+	-moz-tab-size: 4; /* Code for Firefox */
+    -o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+    tab-size: 4;
+}
+
+ul.inhalt {
+	list-style: none;
+	margin-top: 100px;
+}
+
+li.inhalt {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	margin: 40px;
+	width: 40%;
+}
+
+.button1 {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 70px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+}
+
+.button2 {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 70px;
+  padding: 0;
+  font-size: 22px;
+  color: #0a253e;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0a253e;
+}
+
+.button1:hover {
+	background-color: white;
+	color: #0a253e;
+}
+
+.button2:hover {
+	background-color: #0a253e;
+	color: white;
+}

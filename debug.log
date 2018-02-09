@@ -1,3 +1,0 @@
-[0602/195038.799:ERROR:crash_report_database_win.cc(563)] CreateDirectory C:\Program Files (x86)\reports: Zugriff verweigert (0x5)
-[0602/195038.809:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Die Pipe wurde beendet. (0x6D)
-[0602/195038.809:ERROR:crash_report_database_win.cc(563)] CreateDirectory C:\Program Files (x86)\reports: Zugriff verweigert (0x5)

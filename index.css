@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Space+Mono');
+
+@keyframes showup {
+	0% { opacity: 0; }
+	90% { opacity: 1; }
+}
+
+.center {
+	text-align: center;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	display: block;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html {
+	background: #0a253e;
+	width: 100%;
+	height: 100%;
+}
+
+html * {
+	font-family: "Lato";
+	font-size: 20px;
+
+	-webkit-animation: showup 2s;
+       -moz-animation: showup 2s;
+        -ms-animation: showup 2s;
+         -o-animation: showup 2s;
+            animation: showup 2s;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul.menu {
+    width: auto;
+	text-align: right;
+	height: 100px;
+
+	padding-top: 70px;
+	padding-bottom: 30px;
+	padding-left: 0px;
+}
+
+li.menu {
+	display: inline;
+	padding-right: 20px;
+	font-size: 20px;
+
+	color: white;
+	text-decoration-style: wavy;
+}
+
+div.menu {
+	background-color: transparent;
+	height: 180px;
+
+	background-image: linear-gradient(0deg, transparent 0%, black 120%);
+	padding-right: 7%;
+}
+
+div.motto {
+	padding-top: 50px;
+	padding-bottom: 0px;
+
+	line-height: 100px;
+	height: 1000px;
+
+	text-align: center;
+	font-size: 100px;
+	color: white;
+}
+
+div.spruch {
+	align-self: center;
+	align-items: center;
+	align-content: center;
+}
+
+div.m1 {
+	float: left;
+	text-align: right;
+	font-size: 200px;
+	margin-top: 20px;
+	height: 10px;
+	width: 30%;
+}
+
+div.m2 {
+	float: left;
+	text-align: left;
+	font-size: 100px;
+	width: 70%;
+}
+
+div.space {
+	height: 10px;
+}
+
+div.part1 {
+	margin-bottom: 0px;
+}
+
+div.mcenter {
+	font-size: 50px;
+}
+
+div.part2 {
+	background-color: white;
+	height: 1000px;
+}
+
+div.right {
+	float: right;
+	width: 45%;
+	padding-right: 80px;
+}
+
+div.left {
+	float: left;
+	width: 45%;
+	padding-left: 80px;
+}
+
+div.cright {
+	float: right;
+	width: 50%;
+}
+
+div.cleft {
+	float: left;
+	width: 50%;
+}
+
+ul.logo {
+    width: auto;
+	text-align: left;
+	height: 100px;
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 50px;
+	list-style: none;
+
+	color: white;
+}
+
+li.logo {
+	display: table-cell;
+	font-size: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+
+	color: white;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+div.start {
+	align-items: center;
+	align-self: center;
+	align-content: center;
+
+	margin: auto;
+	width: 90%;
+	font-size: 30px;
+	line-height: 30px;
+	height: 700px;
+}
+
+div.start2 {
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	color: white;
+
+	margin: auto;
+	width: 90%;
+	font-size: 30px;
+	line-height: 30px;
+	height: 700px;
+}
+
+div.space {
+	height: 100px;
+	padding: 0;
+	margin: 0;
+}
+
+div.white {
+	background-color: white;
+	padding: 0;
+	margin: 0;
+}
+
+ul.imprint {
+    width: auto;
+	text-align: center;
+
+	padding-top: 40px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+}
+
+li.imprint {
+	display: inline;
+	padding: 20px;
+	font-size: 20px;
+	color: white;
+}
+
+a.imprint {
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+#the_first {
+	height: 1100px
+}
+
+#the_second {
+	height: 1100px
+}
+
+#the_third {
+	height: 1100px
+}
+
+#the_fourth {
+	height: 1100px
+}
+
+div.team {
+	width:100%;
+	padding-top: 50px;
+	height: 650px;
+}
+
+div.team_name {
+	font-size: 30px;
+	padding-top: 20px;
+}
+
+div.team_f {
+	margin-top: 50px;
+	color: black;
+}
+
+div.team_text {
+	font-size: 30px;
+	line-height: 40px;
+
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+div.team_right {
+	float: left;
+	margin: auto;
+	width: 33.33%;
+}
+
+div.team_middle {
+	float: left;
+	margin: auto;
+	width: 33.33%;
+}
+
+div.team_left {
+	float: left;
+	margin: auto;
+	width: 33.33%;
+}

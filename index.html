@@ -1,123 +1,207 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Triploit ORG</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<title>Triploit ORG</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/skeleton.css">
-        <link rel="icon" type="image/png" href="images/favicon.png">
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="vanilla.css">
 
-		<script src="js/prism.js"></script>
-		<script src="js/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).on('click', 'a[href^="#"]', function (event) {
+				event.preventDefault();
 
-        <link rel="stylesheet" href="css/prism.css">
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/container.css">
-        <link rel="stylesheet" href="css/mobile.css">
-        <link rel="stylesheet" href="css/nav.css">
-    </head>
+				$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top
+				}, 500);
+			});
 
-    <body>
-        <div class="main_container">
-			<div class="container">
-	            <div class="row center">
-	                <img src="images/logo.png" style="width: 800px;"></img>
-	            </div>
+			$('a[href^="#"]').click(function () {
+			    $('html, body').animate({
+			        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+			    }, 500);
 
-	            <div>
-	                EN <a href="en/index.html"><img src="http://media.gizmodo.co.uk/wp-content/uploads/2016/09/unionflag-620x349.png" width="30"></img></a>
-	            </div>
+			    return false;
+			});
+		</script>
+	</head>
 
-				<div class="line"></div>
-				<br>
-
-				<div class="row">
-					<div class="center">
-						<a class="menu" href="index.html">Home</a>
-						<a class="menu" href="basm.html">BASM</a>
-						<a class="menu" href="nypp.html">Ny++5</a>
-						<a class="menu" href="tricl.html">TRICL</a>
-						<a class="menu" href="secpm.html">SecPM</a>
-						<a class="menu" href="team.html">Team</a>
-						<a class="menu" href="tbi3.html">TBI3</a>
-						<a class="menu" href="tpl.html">TPL</a>
-						<a class="menu" href="aml/aml.html">AML</a>
-						<a class="menu" href="https://github.com/triploit">GitHub</a>
+	<body>
+		<div class="part1" id="the_first">
+			<b>
+				<div class="cright">
+					<div class="menu" id = "nav">
+						<ul class = "menu">
+							<li class="menu"><a href="index.html">HOME</a></li>
+							<li class="menu"><a href="projects.html">UNSERE PROJEKTE</a></li>
+						</ul>
 					</div>
 				</div>
-	        </div>
 
-	        <div class="container">
-	            <div class="row">
-	                <div class="one-half column">
-	                    <h4>Wilkommen!</h4>
-	                    <p>
-	                        Ich heiße dich herzlich Willkommen auf unserer Website!
-	                        Hier gibt es allerlei Projekte. In der Navigation kannst du
-							dir einige anschauen oder zu unserem GitHub Profil gelangen.
-	                    </p>
-	                </div>
-
-	                <div class="one-half column">
-	                    <h4>Wer sind "Wir"?</h4>
-	                    <p>
-	                        Wir, bzw. Triploit, sind ein Zusammenschluss aus ein
-	                        paar Hobbyprogrammierern. Wir sind derzeit drei.
-	                        Siehe unter "Team".
-	                        <br><br>
-	                        Allgemein aber haben wir uns aus nur einem Grund
-	                        zusammengeschlossen: Programmieren!
-	                        Das eine, was uns alle verbindet! Egal ob GUI, System,
-	                        Java, C++, HTML, CSS, JavaScript, BASM, Ny++, CoaLang,
-	                        AntLang oder was auch immer, wir sind dabei!
-	                        <br><br>
-	                        Die Gruppe programmiert sonst allgemein Programme, die
-	                        sie gerade benötigen, einen Ersatz darstellen, für andere
-	                        Programme oder einfach nur Programme die ihnen gerade
-	                        so in den Sinn kommen.
-	                    </p>
-	                </div>
-	            </div>
-	        </div>
-
-	        <div class="container">
-	            <div class="row">
-	                <div class="one-half column"  style="margin-top: 1%">
-	                    <h4>Andere coole Dudes</h4>
-	                    <p>
-	                        Wir sind anderen Natürlich nicht verschlossen und manche
-	                        von uns arbeiten noch in anderen Gruppen, da wäre zum
-	                        Beispiel AntLang-Software dabei.
-	                        <br><br>
-	                        Erschaffen von einem ganz coolen Typ namens "ein mensch".
-	                        <br><br>
-	                        <a class="button" href="https://antlang-software.github.io">AntLang-Software</a>
-	                    </p>
-	                </div>
-
-					<div class="one-half column" style="margin-top: 1%">
-						<h4>Wo wir uns treffen</h4>
-						<p>
-							Das Forum von <a href="https://www.youtube.com/user/TheMorpheus407">The Morpheus Tutorials</a>
-							ist ein toller Ort um Fragen über bestimmte Themen im
-							IT-Bereich zu stellen, unsere Organisation ist dort zum größten
-							Teil auch anzutreffen.
-							<br><br>
-							<a class="button" href="https://the-morpheus.de/forum/">Das Forum</a>
-							<br><br>
-						</p>
+				<div class="cleft">
+					<div class="menu">
+						<div class="logo" id = "nav">
+							<ul class = "logo">
+								<li class="logo"><a href="index.html"><img src="logo_woc.png" style="width:80px;height:80px;"></a></li>
+								<li class="logo"><a href="index.html">TRIPLOIT ORG</a></li>
+							</ul>
+						</div>
 					</div>
-	            </div>
-	        </div>
+				</div>
+			</b>
 
-			<footer>
-				<a class="footer" href="about.html">Impressum</a>
-				<a class="footer" href="about.html#about">Datenschutzerklärung</a>
-			</footer>
-        </div>
-    </body>
+			<div class="motto">
+				<b>
+					<div class="spruch">
+						<div class="m1">
+							“
+						</div>
+
+						<div class="m2">
+								Versuch es nicht,<br>mach es einfach!
+						</div>
+					</div>
+
+					<img src="logo_woc.png" class="center" style="height:200px;width:200px;margin-bottom:10px;margin-top:500px"></img>
+
+					<div class="mcenter">
+						Willkommen bei Triploit
+					</div>
+				</b>
+
+				<a href="#the_second">
+					<img src="downw.png" class="center" style="padding-bottom:30px;padding-top:-20px;width:40px;height:40px;">
+				</a>
+
+			</div>
+		</div>
+
+		<div class="part2" id="the_second">
+			<div class="space"></div>
+
+			<div class="right">
+				<div class="start">
+					<b><div style="font-size:50px;">Wilkommen!</div></b><br><br>
+					Ich heiße dich herzlich Willkommen auf unserer Website! Hier gibt es allerlei Projekte. In der Navigation kannst du dir einige anschauen oder zu unserem GitHub Profil gelangen.
+				</div>
+			</div>
+
+			<div class="left">
+				<div class="start">
+					<b><div style="font-size:50px;">Wer sind "Wir"?</div></b>
+					<br><br>
+					Wir, bzw. Triploit, sind ein Zusammenschluss aus ein paar Hobbyprogrammierern. Wir sind derzeit drei. Siehe weiter unten.
+					<br><br>
+					Allgemein aber haben wir uns aus nur einem Grund zusammengeschlossen: Programmieren! Das eine, was uns alle verbindet! Egal ob GUI, System, Java, C++, HTML, CSS, JavaScript, BASM, Ny++, CoaLang, AntLang oder was auch immer, wir sind dabei!
+					<br><br>
+					Die Gruppe programmiert sonst allgemein Programme, die sie gerade benötigen, einen Ersatz darstellen, für andere Programme oder einfach nur Programme die ihnen gerade so in den Sinn kommen.
+				</div>
+			</div>
+
+
+			<a href="#the_third">
+				<img src="downb.png" class="center" style="padding-bottom:30px;padding-top:-20px;width:40px;height:40px;">
+			</a>
+		</div>
+
+		<div class="part1" id="the_third">
+			<div class="space"></div>
+
+			<div class="right">
+				<div class="start2">
+					<b><div style="font-size:50px;">Andere coole Dudes</div></b><br><br>
+					Wir sind anderen Natürlich nicht verschlossen und manche von uns arbeiten noch in anderen Gruppen, da wäre zum Beispiel <a href="https://antlang-software.github.io" style="color: #1cccff; font-size: 30px;">AntLang-Software</a> dabei.
+					<br><br>
+					Erschaffen von einem ganz coolen Typ namens "ein mensch".
+
+					<center>
+						<img src="antlang.png" alt="" style="width:400px;height:400px;padding-top:50px;">
+					</center>
+				</div>
+			</div>
+
+			<div class="left">
+				<div class="start2">
+					<b><div style="font-size:50px;">Wo man uns findet</div></b>
+					<br><br>
+					Auf unserem <a href="https://discord.gg/2DAMK7c" style="color: #1cccff; font-size: 30px;">Discord</a> sind wir mehr oder weniger aktiv, aber immer antreffbar. Zusammen besprechenw wir dort Zukünftige Projekte oder diskutieren über verschiedenes.<br>In einem der vielen Kategorien wirst auch du dich wiederfinden!<br>
+					<br>
+					<center>
+						<iframe src="https://discordapp.com/widget?id=224522818757459969&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+					</center>
+				</div>
+			</div>
+
+			<a href="#the_fourth">
+				<img src="downw.png" class="center" style="padding-bottom:30px;padding-top:-20px;width:40px;height:40px;">
+			</a>
+		</div>
+		<!--
+			<img src="logo_woc.png" style="width:100px;height:100px" alt=""><br>
+		-->
+
+		<div class="part2" id="the_fourth">
+			<div class="center" style="padding-top: 50px; font-size: 100px;">
+				<b style="font-size: 100px;line-height:100px;">Das sind wir</b>
+			</div>
+
+			<div class="team">
+				<div class="team_right team_f">
+					<div class="center">
+						<img src="favicon.png" style="width:100px;height:100px" alt=""><br>
+
+						<div class="center team_name"><b>Survari</b></div><br>
+						<div class="team_text">
+Survari, also in dem Falle, ich, der hier die Website schreibt, bin der (Wie NetLamp mich einst bezeichnete) "unter der Haube" Typ.
+Wenns um Systemprogrammierung, Konsole oder System (am besten Linux) geht, bin ich einer der Ansprechpartner. Mein Fachgebiet ist C++ und meine eigenen Programmiersprachen.
+						</div>
+					</div>
+				</div>
+
+				<div class="team_middle team_f">
+					<div class="center">
+						<img src="netlamp.png" style="width:100px;height:100px" alt=""><br>
+
+						<div class="center team_name"><b>NetLamp</b></div><br>
+						<div class="team_text">
+
+							NetLamp ist unser bester Programmierer, was Java und Web betrifft. Außerdem entwickelt er zur Zeit an CoaLang, seiner eigenen Programmiersprache.
+							Wer also Lust auf eine Programmiersprache hat, die super einfach zu lernen und einfach zu benutzen ist, schaut mal hier vorbei.
+						</div>
+					</div>
+				</div>
+
+				<div class="team_left team_f">
+					<div class="center">
+						<img src="astroos.png" style="width:100px;height:100px" alt=""><br>
+
+						<div class="center team_name"><b>StrangeGamerHD</b></div><br>
+						<div class="team_text">
+
+							StrangeGamerHD ist unser Servertyp und ein toller Programmierer. Er programmiert am liebsten Lua und C++.
+							Außerdem arbeiten er und Survari an einem Betriebssystem auf Linux basis. Wer da neugierig wurde schaut mal <a href="https://astro-os.github.io" style="color:#1cccff;font-size:30px;">hier</a> vorbei.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="">
+				<a href="#the_first">
+					<img src="upb.png" class="center" style="padding-bottom:30px;padding-top:-20px;width:40px;height:40px;">
+				</a>
+			</div>
+		</div>
+
+		<div class="part1">
+			<b>
+				<div class="space">
+						<ul class="imprint">
+							<li class="imprint"><a class="imprint" href="about.html">Impressum</a></li>
+							<li class="imprint"><a class="imprint" href="about.html#data">Datenschutzerklärung</a></li>
+						</ul>
+				</div>
+			</b>
+		</div>
+	</body>
 </html>
