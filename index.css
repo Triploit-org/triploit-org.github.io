@@ -24,13 +24,13 @@ html {
 
 html * {
 	font-family: "Lato";
-	font-size: 20px;
+	font-size: 10px;
 
 	-webkit-animation: showup 2s;
-       -moz-animation: showup 2s;
-        -ms-animation: showup 2s;
-         -o-animation: showup 2s;
-            animation: showup 2s;
+	   -moz-animation: showup 2s;
+		-ms-animation: showup 2s;
+		 -o-animation: showup 2s;
+			animation: showup 2s;
 }
 
 body {
@@ -43,7 +43,7 @@ body {
 }
 
 ul.menu {
-    width: auto;
+	width: auto;
 	text-align: right;
 	height: 100px;
 
@@ -123,13 +123,25 @@ div.part2 {
 div.right {
 	float: right;
 	width: 45%;
-	padding-right: 80px;
+	padding-right: 10px;
+}
+
+div.text {
+	font-size: 25px;
+	line-height: 26px;
+}
+
+.title {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 40px;
+	line-height: 10px;
 }
 
 div.left {
 	float: left;
 	width: 45%;
-	padding-left: 80px;
+	padding-left: 10px;
 }
 
 div.cright {
@@ -143,7 +155,7 @@ div.cleft {
 }
 
 ul.logo {
-    width: auto;
+	width: auto;
 	text-align: left;
 	height: 100px;
 
@@ -208,7 +220,7 @@ div.white {
 }
 
 ul.imprint {
-    width: auto;
+	width: auto;
 	text-align: center;
 
 	padding-top: 40px;
@@ -248,7 +260,7 @@ a.imprint {
 div.team {
 	width:100%;
 	padding-top: 50px;
-	height: 650px;
+	height: 80%;
 }
 
 div.team_name {
@@ -263,7 +275,9 @@ div.team_f {
 
 div.team_text {
 	font-size: 30px;
-	line-height: 40px;
+	line-height: 30px;
+	width: 100%;
+	height: 20px;
 
 	padding-top: 20px;
 	padding-right: 20px;
