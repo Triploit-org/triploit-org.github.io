@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/github.css">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/index.html.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/code.js"></script>
+
+        <script type="text/javascript">
+			$(document).on('click', 'a[href^="#"]', function (event) {
+				event.preventDefault();
+
+				$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top
+				}, 500);
+			});
+
+			$('a[href^="#"]').click(function () {
+			    $('html, body').animate({
+			        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+			    }, 500);
+
+			    return false;
+			});
+        </script>
+    </head>
+
+    <body>
+        <div class="sidenav">
+            <h2 style="margin-bottom: 25%;">	
+                <a href="index.html#about" class="logo">
+                    <div style="float: left; padding-right: 5%;">
+                            Triploit
+                    </div>
+    
+                    <div style="height: 0; margin-left: 0;">
+                        <img title="" src="img/logo.png" alt="" width="13%" />
+                    </div>
+                </a>
+            </h2>
+
+            <a href="#about">Über</a>
+            <a href="#git">GitHub</a>
+
+            <a href="#projects">Projekte</a>
+            <a href="#basm" class="no2">BASM</a>
+            <a href="#tridy"class="no2">Tridymite</a>
+            <a href="#secpm"class="no2">SecundoPM</a>
+            <a href="#aml"class="no2">AML</a>
+
+            <a href="#lang">Sprachen</a>
+            <a href="#cpp" class="no2">C++</a>
+            <a href="#java"class="no2">Java</a>
+
+
+            <a href="#contact">Kontakt</a>
+        </div>
+
+        <div class="content" id="about">
+            <img src="img/slogan.png" width="50%" class="center"><br>
+
+            <h2>Über Triploit</h2>
+
+            <p>
+                Triploit ist eine Organisation bestehend aus Menschen, die zusammen Programmieren wollen.
+                Bisher sind nur wenige Personen dabei, jedoch möchte jeder seine Ambitionen verwirklichen und dabei
+                wird jedem geholfen.
+            </p>
+
+            <p>
+                Solltest du ein Problem haben, kannst du es gerne öffentlich bei uns ansprechen.
+                Oder aber du wendest dich an einen Administrator.
+            </p>
+        </div>
+
+        <div class="content nbg" id="git">
+            <h2>Wir auf GitHub</h2>
+
+            <p>
+                GitHub ist für Entwickler wohl <i>die Plattform</i> zum veröffentlichen von Source-Code. Daher haben auch wir
+                uns auf GitHub niedergelassen, um dort alle unsere Projekte zu veröffentlichen.
+            </p>
+
+            <p>
+                Beim Veröffentlichen gelten keine Grenzen, bis auf das Verbreiten von Schadcode und anderen gesetzeswidrigen Inhalten.
+                Besuch uns doch mal auf <a href="https://github.com/triploit">GitHub</a>.
+            </p>
+        </div>
+
+        <div class="content" id="projects">
+            <h2>Unsere Projekte</h2>
+
+            <p>
+                Einige Projekte sind so ausgereift und sinnvoll, dass sie hier vorgestellt werden.<br>
+                Wichtig ist noch zu sagen: </p>
+                
+            <p>
+                <b>Computer machen keine Fehler, aber Menschen.</b> Es kann immer
+                etwas schiefgehen, daher übernimmt jedes Mitglied der Organisation keine Haftung für alle Projekte,
+                an denen sie entwickeln und möglichen Schäden, die aus ihnen entstehen können.
+            </p>
+
+            <div class="inner_content" id="basm">
+                <h3>BASM</h3>
+
+                <p>
+                    BASM ist, wie der Name schon erahnen lässt, ein Pseudoassembler, gebaut, um Menschen den Einstieg 
+                    in die Assemblerprogrammierung etwas zu erleichtern.
+                </p>
+
+                <p>
+                    Ein Hallo-Welt-Programm in BASM sieht folgendermaßen aus:
+                </p>
+
+                <pre class="prettyprint">
+main:                   # Funktion main, die wird als erstes aufgerufen
+    push "Hallo Welt"   # "Hallo Welt" auf den Stack legen
+    mov 10, hx          # Setzt HX auf die Länge von "Hallo Welt" (10)
+    jmp write_string    # Funktion write_string aufrufen
+    hlt                 # Das Programm stoppen
+  
+write_string:           # Funktion write_string
+    .beg:               # Sprungmarke beg
+        ptc             # Schreibe das ASCII Zeichen des obersten Wertes des Stacks
+        pop             # Entferne oberstes Element vom Stack
+        sub 1, hx       # Subtrahiere 1 von HX
+    ggn beg             # Wenn HX größer 0 ist, springt er zu beg
+    return              # Funktion beenden, kehrt zu main zurück
+                </pre>
+            </div>
+
+            <div class="inner_content" id="tridy">
+                <h3>Tridymite</h3>
+
+                <p>
+                    Tridymite ist in Entwicklung und kann derzeit leider nicht verwendet werden.
+                    Weiteres folgt später.
+                </p>
+            </div>
+
+            <div class="inner_content" id="secpm">
+                <h3>SecundoPM</h3>
+
+                <p>
+                    SecundoPM ist veraltet, es sollte nicht benutzt werden. Zwar ist es völlig funktionsfähig, 
+                    jedoch empfehlen wir nicht damit weiterzuarbeiten.
+                </p>
+
+                <p>
+                    Trotzdem soll hier eine kleine Erklärung folgen:
+                </p>
+
+                <p>
+                    SecundoPM/SecPM ist der Nachfolger zu TRICL und ein ausgesprochen guter und einfach zu benutzender Paketmanager. 
+                    Um ihn zu nutzen muss er einfach nur heruntergeladen und mit GCC/G++ kompiliert werden. Danach reicht ein einfaches "./secpm install secundo-pm". 
+                    Auf Windows läuft der Paketmanager zwar auch, es ist jedoch nicht empfohlen in dort zu benutzen.
+                </p>
+
+                <p>
+                    Ein Beispiel für ein Installer-Script: 
+                </p>
+
+                <pre class="prettyprint">
+func install
+{
+    echo "Dieser Shellbefehl wird beim Installieren ausgeführt."
+}
+
+func remove
+{
+    echo "Dieser Shellbefehl wird beim Entfernen des Paketes ausgeführt."
+}
+
+func update
+{
+    echo "Ich rufe die Funktion install auf!"
+    &install
+}
+                </pre>
+
+                <p>
+                        Wird dies in die Installer-Datei (in der GitHub Repo in pkg/ins.sc) geschrieben und das 
+                        Paket mit "secpm install [GitHub Username]:[Repo Name]", so wird beim installieren nun "Hallo Welt" ausgegeben. 
+                        Pakete können natürlich so erstellt werden. Es werden einfach die nötigen Shell-Befehle 
+                        in die Datei eingetragen. 
+                </p>
+
+                <table class="ntable">
+                    <thead>
+                        <th>Argument in SecPM</th>
+                        <th>Skriptfunktion</th>
+                        <th>Beschreibung</th>
+                    </thead>
+
+                    <tr>
+                        <td><pre class="prettyprint">install &lt;Nutzer&gt;:&lt;Paket&gt;</pre></td>
+                        <td>install</td>
+                        <td>Installiert eine Repository eines Nutzers von GitHub.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">update &lt;Nutzer&gt;:&lt;Paket&gt;</pre></td>
+                        <td>update</td>
+                        <td>Aktualisiert ein Paket eines Nutzers auf GitHub.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">update all</pre></td>
+                        <td></td>
+                        <td>Aktualisiert alle installierten pakete.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">remove &lt;Nutzer&gt;:&lt;Paket&gt;</pre></td>
+                        <td>remove</td>
+                        <td>Entfernt ein Paket eines Nutzers.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">local</pre></td>
+                        <td></td>
+                        <td>Einen lokalen Ordner als Paket installieren.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">trust</pre></td>
+                        <td></td>
+                        <td>Einem Nutzer vertrauen und keine Sicherheitsfragen bei der Installation stellen.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">untrust</pre></td>
+                        <td></td>
+                        <td>Einem Nutzer nicht mehr vertrauen.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">showtrust</pre></td>
+                        <td></td>
+                        <td>Alle Nutzer anzeigen, denen man vertraut.</td>
+                    </tr>
+
+                    <tr>
+                        <td><pre class="prettyprint">list</pre></td>
+                        <td></td>
+                        <td>Alle installierten Pakete anzeigen.</td>
+                    </tr>
+                    </table>
+            </div>
+
+
+
+            <div class="inner_content" id="aml">
+                    <h3>AML</h3>
+    
+                    <p>
+                            AML ist eine HTML basierende Sprache, die in Java geschrieben wurde. Der Compiler übersetzt den AML-Code in HTML-Code. 
+                            Allgemein ist AML viel kleiner als HTML, es ist überischtlicher und man muss weniger tippen.
+                            Alles was in HTML möglich ist, ist auch in AML möglich, daher hat man keine schwierigkeiten mit neuen oder anderen Keywords etc. 
+                            Das einzige was sich ändert, ist der Syntax.
+                    </p>
+
+                    <p>Schauen wir uns ein Beispiel an: </p>
+
+                    <pre class="prettyprint">
+html {
+    head {
+        style {
+            div.farbig {
+                font-size: 30px;
+                color: green;
+                text-align: center;
+            }
+        }
+    }
+
+    body {
+        div (class: "farbig") {
+            "Hallo Welt!"
+        }
+    }
+}
+                    </pre>
+
+                    <p>
+                        Wichtig ist hier, dass "Hallo Welt!" in Anführungszeichen steht. 
+                        Jeglicher Text, der kein Code (CSS, PHP, JavaScript) oder HTML-Tag ist, muss in Anführungszeichen stehen, 
+                        da er eben sonst als Tag interpretiert wird.</p>
+                    </p>
+
+                    <p>Daraus wird dann dieser HTML-Code:</p>
+
+                    <pre class="prettyprint">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+            div.farbig {
+                font-size: 30px;
+                color: green;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="farbig"&gt;
+            Hallo Welt!
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+
+                    <p>Das sieht dann am Ende so aus:</p>
+
+                    <iframe src="test.html" frameborder="0" class="test"></iframe>
+                </div>
+        </div>    
+
+        <div class="content nbg" id="lang">
+            <h2>Programmiersprachen</h2>
+
+            <p>
+                Da bei uns verschiedene Programmiersprachen von verschiedenen Personen verwendet werden,
+                ist es besser, wenn man einen einheitlichen Stil hat. Derzeit arbeiten wir an zwei verschiedenen.
+            </p>
+
+            <p>
+                Diese Standards werden nicht komplex und groß sein, in speziellen Fällen wird sicherlich nachgefragt werden müssen,
+                wie man bestimmte Sachen formatiert.
+                Bis diese Fälle jedoch eintreten, reicht eine grundlegende Beschreibung mit viel Beispielcode aus.
+            </p>
+
+            <div class="inner_content" id="cpp">
+                <h3>C++</h3>
+
+                <p>
+                    C++ ist die erste Programmiersprache, die einen Standard bekommt.
+                </p>
+            </div>
+
+            <div class="inner_content" id="java">
+                <h3>Java</h3>
+
+                <p>
+                    Auch Java wird einen eigenen Standard bekommen.
+                </p>
+            </div>
+        </div>
+
+        <div class="content" id="contact">
+            <h2>Kontakt</h2>
+
+            <p>
+                Finde dich auf unserem Discord ein! Dort können wir zusammen reden, schreiben und Code sowie Ideen austauschen.
+                Die meisten von uns sind dort und warten schon auf dich.
+            </p>
+
+            <iframe src="https://discordapp.com/widget?id=224522818757459969&amp;theme=dark" allowtransparency="true" width="350" height="500" frameborder="0"></iframe>
+        
+            <!-- Discord Button Einfügen, auch Twitter und YouTube -->
+
+        </div> 
+
+        <div class="footer nbg" id="impressum">
+            <h3><a href="about.html">Impressum</a></h3>
+        </div>
+    </body>
+</html> 
