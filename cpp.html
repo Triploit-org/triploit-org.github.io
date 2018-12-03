@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <script src="js/code.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+
+        $('a[href^="#"]').click(function() {
+            $('html, body').animate({
+                scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+            }, 500);
+
+            return false;
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/github.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/cpp.html.css">
+</head>
+
+<body>
+    <div class="sidenav">
+        <h2 style="margin-bottom: 25%;">	
+            <a href="index.html#about" class="logo">
+                <div style="float: left; padding-right: 5%;">
+                        Triploit
+                </div>
+
+                <div style="height: 0; margin-left: 0;">
+                    <img title="" src="img/logo.png" alt="" width="13%" />
+                </div>
+            </a>
+        </h2>
+
+        <a href="index.html">Home</a>
+        <a href="#1headersincluding">Header &amp; Einbindung</a>
+            <a href="#includeguards" class="no2">Include Guards</a>
+
+        <a href="#2classes">2. Klassen</a>
+            <a href="#privatescope" class="no2">Private Scope</a>
+            <a href="#publicscope" class="no2">Public Scope</a>
+
+        <a href="#3functions">3. Funktionen</a>
+
+        <a href="#4namespaces">4. Namespace</a>
+            <a href="#using" class="no2">Nutzen</a>
+            <a href="#declaring" class="no2">Definieren</a>
+
+        <a href="#5statements">5. Statements</a>
+            <a href="#longstatements" class="no2">Lange Statements</a>
+
+        <a href="index.html#contact">Kontakt</a>
+    </div>
+
+    <div class="content">
+        <h1>Triploit C++ Style Guide</h1>
+
+        <h2 id="1headersincluding">1. Header &amp; Einbindung</h2>
+        <p>Binde Header in folgender Reihenfolge ein:</p>
+
+        <pre class="prettyprint"><code class="cpp language-cpp">#include &lt;standard c++&gt;
+...
+
+#include &lt;systemspeziefisch&gt;
+...
+
+#include &lt;eigenes&gt;
+...
+#include "eigenes"
+...</code></pre>
+
+        <h3 id="includeguards">Include Guards</h3>
+
+        <div class="d_no2">
+            <p>Definiere Header immer mit Include Guards, so werden doppelte Einbindungen verhindert:</p>
+
+            <pre class="prettyprint"><code class="cpp language-cpp">#ifndef _CLASS_OR_SOME_OTHER_NAME_HPP
+#define _CLASS_OR_SOME_OTHER_NAME_HPP
+...
+#endif</code></pre>
+                    
+            <p>Beispiel:</p>
+            
+            <pre class="prettyprint"><code class="cpp language-cpp">#ifndef _DOG_HPP
+#define _DOG_HPP
+
+#include "animal.hpp"
+
+class Dog
+{
+    ...
+};
+
+#endif</code></pre>
+        </div>
+
+        <h2 id="2classes">2. Klassen</h2>
+        <p>Wenn du Klassen definierst, nutze Getter und Setter. Dies ist der beste Weg, Variablen vor dem Zurückgeben noch abzuändern. Sie sind nicht nötig, aber hilfreich.</p>
+
+        <pre class="prettyprint"><code class="cpp language-cpp">class Name
+{
+private:
+    int x;
+    int y;
+
+public:
+    void setX(const int &value)
+    {
+        x = value;
+    }
+
+    int getX()
+    {
+        return x;
+    }
+
+    void setY(const int &value)
+    {
+        y = value;
+    }
+
+    int getY()
+    {
+        return y;
+    }
+};</code></pre>
+
+        <h3 id="privatescope">Private Scope</h3>
+
+        <div class="d_no2">
+            <p>Definiere hier alle Variablen und Funktionen in Kleinschreibweise, mit Unterstrichen, wenn nötig:</p>
+
+            <pre class="prettyprint"><code class="cpp language-cpp">private:
+    std::string realy_long_name;
+
+    int do_something_private()
+    {
+        return realy_long_name.size();
+    }</code></pre>
+
+            <p>Benutze lowerCamelCase hier nicht!</p>
+        </div>
+
+        <h3 id="publicscope">Public Scope</h3>
+        <div class="d_no2">
+            <p>Hier sind nur Funktionen erlaubt, definiere hier keine Variablen! Schreibe alle Namen in lowerCamelCase:
+                </p>
+        
+                <pre class="prettyprint"><code class="cpp language-cpp">public:
+    std::string getLongName()
+    {
+        return realy_long_name;
+    }
+
+    void setLongName(const std::string &amp;name)
+    {
+        realy_long_name = name;
+    }</code></pre>
+
+        </div>
+
+        <h2 id="3functions">3. Functions</h2>
+        <p>Benenne alle Funktionen, die nicht innerhalb von Klassen definiert werden, in Kleinschreibweise (mit Unterstrichen) und benutze in den Argumenten Call by Reference! 
+            In Funktionen die länger brauchen, solltest du Call by Value benutzen.<br>Argumente abzuändern ist nie erlaubt.
+            Es ist ein schlechter Stil, daher solltest du immer, wenn möglich, konstante Argumente verwenden. </p>
+        
+        <pre class="prettyprint"><code class="cpp language-cpp">int ret(const &amp;int i)
+{
+    return i;
+}</code></pre>
+
+        <p>Gib Objekte als normale Variablen zurück:</p>
+        <pre class="prettyprint"><code class="cpp language-cpp">class Object
+{
+public:
+    Object(const std::string &amp;s)
+    {
+        std::cout &lt;&lt; s &lt;&lt; std::endl;
+    }
+};
+
+const Object returnObj()
+{
+    return Object("Hi");
+}
+
+int main(int argc, char* argv[])
+{
+    Object o = returnObj();
+}</code></pre>
+
+        <p>Du kannst, und solltest, konstante Objekte zurückgeben, denn mit Rückgabewerten sollte nicht gespielt werden.</p>
+        <h2 id="4namespaces">4. Namespace</h2>
+        <h3 id="using">Benutzen</h3>
+        
+        <div class="d_no2">
+            <p>Nutze niemals <code>use</code>!
+                <br /> Mach soetwas nicht:
+            </p>
+
+            <pre class="prettyprint"><code class="cpp language-cpp">...
+using namespace std;
+...</code></pre>
+
+            <p>Namensräume zu "benutzen" ist nicht vorteilhaft, da manchmal die Objekte in Namensräumen gleich heißen und so Konflikte entstehen können.
+                Also nutze niemals <code>use</code>!</p>
+        </div>
+        
+        <h3 id="declaring">Definieren</h3>
+
+        <div class="d_no2"> 
+            <p>Definiere Namensräume immer in Kleinschreibweise (mit Unterstrichen wenn nötig). 
+                Dies gilt auch für die Funktionen, Klassen und Variablen die im Namensraum definiert werden. Benutze hier nicht lowerCamelCase!</p>
+        
+            <pre class="prettyprint"><code class="cpp language-cpp">namespace my_cool_namespace
+{
+    int my_cool_varible;
+    int some_different;
+
+    std::string do_something_cool()
+    {
+        return "cool!";
+    }
+}</code></pre>
+        </div>
+
+        <h2 id="5statements">5. Statements</h2>
+        <p>Ein paar Beispiele, wie Statements auszusehen haben:</p>
+
+        <pre class="prettyprint"><code class="cpp language-cpp">if (a == true)
+{
+    a = false;
+}
+else if (a == false)
+{
+    a = true;
+}
+else
+{
+    // do, what to do
+}</code></pre>
+
+        <pre class="prettyprint"><code class="cpp language-cpp">switch (i)
+{
+    case 1:
+        i++;
+        break;
+
+    case 2:
+        i--;
+        break;
+
+    default:
+        doNothing();
+        break;
+}</code></pre>
+    
+        <pre class="prettyprint"><code class="cpp language-cpp">while (true)
+{
+    std::cout &lt;&lt; "Hello endless loop!" &lt;&lt; std::endl;
+}</code></pre>
+
+        <h3 id="longstatements">Lange Statements</h3>
+
+        <div class="d_no2">
+        <p>Wenn du mehr als 2 Abfragen hast, schreibe jede Abfrage in eine neue Zeile:</p>
+
+        <pre class="prettyprint"><code class="cpp language-cpp">if (a.getValue() == 1 ||
+    a.getSecondValue() == 2 ||
+    a.getThirdValue() == 3 ||
+    a.getFourthValue() == 4)
+{
+    std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
+}</code></pre>
+
+        </div>
+    </div>
+
+    <!--
+         <pre class="prettyprint">
+             ...
+         </pre>
+         -->
+
+        <div class="footer nbg" id="impressum">
+            <h3><a href="about.html">Impressum</a></h3>
+        </div>
+    </body>
+</html>
