@@ -34,9 +34,17 @@ code
 
 pre.prettyprint
 {
-    font-size: 80%;
+    font-size: 70%;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300;
+
+    border-color: #f4f4f7;
+    border-radius: 20px;
+
+    background: #f4f4f7;
+    padding: 2%;
+
+    margin: 1%;
 }
 
 p
