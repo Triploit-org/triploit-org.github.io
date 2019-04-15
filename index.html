@@ -76,7 +76,7 @@
 
             <p>
                 Solltest du ein Problem haben, kannst du es gerne öffentlich bei uns ansprechen.
-                Oder aber du wendest dich an einen Administrator.
+                Oder aber du wendest dich an einen Administrator auf dem Discord.
             </p>
         </div>
 
@@ -104,7 +104,9 @@
             <p>
                 <b>Computer machen keine Fehler, aber Menschen.</b> Es kann immer
                 etwas schiefgehen, daher übernimmt jedes Mitglied der Organisation keine Haftung für alle Projekte,
-                an denen sie entwickeln und möglichen Schäden, die aus ihnen entstehen können.
+                an denen sie entwickeln und möglichen Schäden, die aus ihnen entstehen können. Sollte jedoch
+                absichtlich Schadcode in einem unserer Programme auftauchen, bitten wir es dringenstens zu melden.
+                Der oder die Schuldige muss dafür zur Rechenschaft gezogen werden.
             </p>
 
             <div class="inner_content" id="basm">
@@ -112,7 +114,8 @@
 
                 <p>
                     BASM ist, wie der Name schon erahnen lässt, ein Pseudoassembler, gebaut, um Menschen den Einstieg 
-                    in die Assemblerprogrammierung etwas zu erleichtern.
+                    in die Assemblerprogrammierung etwas zu erleichtern. Dabei werden Speicherverwaltung und einige
+                    Arbeitsweisen des normalen Assemblers vereinfacht.
                 </p>
 
                 <p>
@@ -140,8 +143,10 @@ write_string:           # Funktion write_string
                 <h3>Tridymite</h3>
 
                 <p>
-                    Tridymite ist in Entwicklung und kann derzeit leider nicht verwendet werden.
-                    Weiteres folgt später.
+                    Tridymite ist ein Nachfolger zu SecundoPM, ein Paketmanager für Git-Projekte. Er soll sicherer und trotzdem
+                    einfach für Nutzer und Entwickler sein. Ein vorgefertigtes Installationsskript macht die Installation einfach.
+                    Besonders für Entwickler sollte dieses Projekt interessant sein, da es eine einfache Möglichkeit ist, Projekte
+                    Nutzern bereitzustellen. Schau mal <a href="https://github.com/triploit/tridymite/">hier</a>.
                 </p>
             </div>
 
@@ -158,101 +163,11 @@ write_string:           # Funktion write_string
                 </p>
 
                 <p>
-                    SecundoPM/SecPM ist der Nachfolger zu TRICL und ein ausgesprochen guter und einfach zu benutzender Paketmanager. 
+                    SecundoPM/SecPM ist ein ausgesprochen guter und einfach zu benutzender Paketmanager. 
                     Um ihn zu nutzen muss er einfach nur heruntergeladen und mit GCC/G++ kompiliert werden. Danach reicht ein einfaches "./secpm install secundo-pm". 
-                    Auf Windows läuft der Paketmanager zwar auch, es ist jedoch nicht empfohlen in dort zu benutzen.
+                    Auf Windows läuft der Paketmanager zwar auch, es ist jedoch nicht empfohlen ihn dort zu benutzen.
+                    Er wird jedoch nicht weiterentwickelt, da er unsicher ist und von Tridymite ersetzt wird.
                 </p>
-
-                <p>
-                    Ein Beispiel für ein Installer-Script: 
-                </p>
-
-                <pre class="prettyprint">
-func install
-{
-    echo "Dieser Shellbefehl wird beim Installieren ausgeführt."
-}
-
-func remove
-{
-    echo "Dieser Shellbefehl wird beim Entfernen des Paketes ausgeführt."
-}
-
-func update
-{
-    echo "Ich rufe die Funktion install auf!"
-    &install
-}
-                </pre>
-
-                <p>
-                        Wird dies in die Installer-Datei (in der GitHub Repo in pkg/ins.sc) geschrieben und das 
-                        Paket mit "secpm install [GitHub Username]:[Repo Name]", so wird beim installieren nun "Hallo Welt" ausgegeben. 
-                        Pakete können natürlich so erstellt werden. Es werden einfach die nötigen Shell-Befehle 
-                        in die Datei eingetragen. 
-                </p>
-
-                <table class="ntable">
-                    <thead>
-                        <th>Argument in SecPM</th>
-                        <th>Skriptfunktion</th>
-                        <th>Beschreibung</th>
-                    </thead>
-
-                    <tr>
-                        <td><pre class="prettyprint">install &lt;Nutzer&gt;:&lt;Paket&gt;</pre></td>
-                        <td>install</td>
-                        <td>Installiert eine Repository eines Nutzers von GitHub.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">update &lt;Nutzer&gt;:&lt;Paket&gt;</pre></td>
-                        <td>update</td>
-                        <td>Aktualisiert ein Paket eines Nutzers auf GitHub.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">update all</pre></td>
-                        <td></td>
-                        <td>Aktualisiert alle installierten pakete.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">remove &lt;Nutzer&gt;:&lt;Paket&gt;</pre></td>
-                        <td>remove</td>
-                        <td>Entfernt ein Paket eines Nutzers.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">local</pre></td>
-                        <td></td>
-                        <td>Einen lokalen Ordner als Paket installieren.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">trust</pre></td>
-                        <td></td>
-                        <td>Einem Nutzer vertrauen und keine Sicherheitsfragen bei der Installation stellen.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">untrust</pre></td>
-                        <td></td>
-                        <td>Einem Nutzer nicht mehr vertrauen.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">showtrust</pre></td>
-                        <td></td>
-                        <td>Alle Nutzer anzeigen, denen man vertraut.</td>
-                    </tr>
-
-                    <tr>
-                        <td><pre class="prettyprint">list</pre></td>
-                        <td></td>
-                        <td>Alle installierten Pakete anzeigen.</td>
-                    </tr>
-                    </table>
             </div>
 
 
@@ -363,9 +278,6 @@ html {
             </p>
 
             <iframe src="https://discordapp.com/widget?id=224522818757459969&amp;theme=dark" allowtransparency="true" width="350" height="500" frameborder="0"></iframe>
-        
-            <!-- Discord Button Einfügen, auch Twitter und YouTube -->
-
         </div> 
 
         <div class="footer nbg" id="impressum">
