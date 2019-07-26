@@ -1,5 +1,4 @@
-pre.prettyprint
-{
+pre.prettyprint {
     font-size: 70%;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300;
@@ -13,20 +12,17 @@ pre.prettyprint
     margin: 1%;
 }
 
-h2
-{
+h2 {
     margin-bottom: 0%;   
     margin-top: 3%;
 }
 
-h3
-{
+h3 {
     margin-bottom: 1%;
     margin-top: 1%;
 }
 
-p
-{
+p {
     font-family: "Heebo", sans-serif;
     font-size: 90%;
 
@@ -36,18 +32,15 @@ p
     padding-left: 1%;
 }
 
-div.d_no2
-{
+div.d_no2 {
     padding-left: 3%;
 }
 
-.sidenav a
-{
+.sidenav a {
     margin-top: 7%;
     margin-bottom: 1%;
 }
 
-a.no2 
-{
+a.no2 {
     margin-top: 1%;
 }
