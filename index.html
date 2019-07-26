@@ -8,24 +8,7 @@
 	    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/code.js"></script>
-
-        <script type="text/javascript">
-			$(document).on('click', 'a[href^="#"]', function (event) {
-				event.preventDefault();
-
-				$('html, body').animate({
-					scrollTop: $($.attr(this, 'href')).offset().top
-				}, 500);
-			});
-
-			$('a[href^="#"]').click(function () {
-			    $('html, body').animate({
-			        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-			    }, 500);
-
-			    return false;
-			});
-        </script> 
+        <script type="text/javascript" src="js/animations.js"></script> 
 	    
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/navigation.css">
